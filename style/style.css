@@ -1,0 +1,231 @@
+/* Общие стили для всех элементов */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Стили для страницы входа */
+body.login-page {
+    background: #0071c5 url('images/backgroundlogin.jpg') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #0071c5;
+    color: #0071c5;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0071c5;
+    color: white;
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-page .logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.pure-form input[type="email"],
+.pure-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+}
+
+.pure-button {
+    width: 100%;
+    background-color: #0071c5;
+    color: white;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.link {
+    display: block;
+    margin: 0.5rem 0;
+    color: #0071c5;
+    text-decoration: none;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #0071c5;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Логотип - общие стили */
+.logo img {
+    height: 40px;
+}
+
+/* Герой-секция */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Блок продуктів */
+.products {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Блок новин */
+.news {
+    padding: 4rem 2rem;
+}
+
+.news h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.news-item h3 {
+    margin-top: 1rem;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    body.login-page {
+        background-attachment: scroll;
+    }
+}
