@@ -14,3 +14,19 @@ if (h1) {
 } else {
   console.log("<h1> на сторінці немає");
 }
+
+let elems = document.querySelectorAll("*"); 
+
+elems.forEach(elem => {
+    let oldColor = window.getComputedStyle(elem).backgroundColor;
+
+    elem.addEventListener("mouseenter", function() {
+        oldColor = window.getComputedStyle(elem).backgroundColor; 
+        elem.style.backgroundColor = "red";
+    });
+
+    elem.addEventListener("mouseleave", function() {
+        elem.style.backgroundColor = oldColor;
+    });
+});
+
