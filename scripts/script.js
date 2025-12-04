@@ -14,7 +14,6 @@ function loadNewImages() {
 
   imagesUrl.forEach((url, index) => {
     setTimeout(() => {
-      // СОЗДАЕМ FRAGMENT
       const fragment = document.createDocumentFragment();
       const img = document.createElement('img');
       img.src = url;
@@ -22,7 +21,6 @@ function loadNewImages() {
       img.style.width = '200px';
       img.style.margin = '10px';
       
-      // Добавляем в fragment, потом fragment в DOM
       fragment.appendChild(img);
       productGrid.appendChild(fragment);
     }, index * 1000);
