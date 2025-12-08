@@ -1,0 +1,20 @@
+{
+    "name": "egor/composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Egor\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "northwww",
+            "email": "egorsavin943@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.9",
+        "symfony/var-dumper": "^8.0",
+        "guzzlehttp/guzzle": "^7.10"
+    }
+}
